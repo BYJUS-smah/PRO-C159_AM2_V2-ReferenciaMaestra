@@ -8,7 +8,7 @@ AFRAME.registerComponent("cursor-listener", {
     this.handleMouseLeaveEvents();
   },
   handleClickEvents: function () {
-    //Cursor 'click' Events
+    //Eventos 'click' del cursor.
     this.el.addEventListener("click", evt => {
       const placesContainer = document.querySelector("#places-container");
       const { state } = placesContainer.getAttribute("tour");
@@ -45,13 +45,13 @@ AFRAME.registerComponent("cursor-listener", {
     }
   },
   handleMouseEnterEvents: function () {
-    //Cursor 'mouseenter' Events
+    //Evento 'mouseenter' del cursor.
     this.el.addEventListener("mouseenter", () => {
       this.handlePlacesListState();
     });
   },
   handleMouseLeaveEvents: function () {
-    //Cursor 'mouseleave' Events
+    //Evento 'mouseleave' del cursor.
     this.el.addEventListener("mouseleave", () => {
       const { selectedItemId } = this.data;
       if (selectedItemId) {
